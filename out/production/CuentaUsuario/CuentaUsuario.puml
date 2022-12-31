@@ -1,0 +1,16 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class Empresa {
+    - nombreEmpresa: String
+    + crearCuenta(): void
+    + abrirCuenta(): boolean
+    + cerraCuenta(): void
+}
+class Cuenta{
+    - usuario: String
+    - clave: String
+    + claveCorrecta(): boolean
+}
+Empresa -> "*" Cuenta: cuentas
+@enduml
